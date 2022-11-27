@@ -1,0 +1,1 @@
+module "huzejun_go/gin_demo2022"
