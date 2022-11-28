@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 /*
@@ -30,6 +31,32 @@ func main() {
 
 	// 指定用户使用GET请求访问/hello时，执行sayHello这个函数
 	r.GET("/hello", sayHello)
+
+	/*	r.GET("/book",...)
+		r.GET("/create_book",...)
+		r.GET("/update_book",...)
+		r.GET("/delete_book",...)*/
+
+	r.GET("/book", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "GET",
+		})
+	})
+	r.POST("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "POST",
+		})
+	})
+	r.PUT("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "PUT",
+		})
+	})
+	r.DELETE("/book", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "DELETE",
+		})
+	})
 
 	//启动服务
 	r.Run(":9090")
