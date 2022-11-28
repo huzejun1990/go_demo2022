@@ -1,0 +1,9 @@
+<h1 style='color:red'>Hello Golang!</h1>
+<h2>how are you!</h2>
+<img id='i1' src='https://img0.baidu.com/it/u=1287953327,756798772&fm=253&fmt=auto&app=138&f=JPEG?w=1000&h=500'>
+<button id='b1'>点我</button>
+<script>
+document.getElementById('b1').onclick=function(){
+    document.getElementById('i1').src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgss0.baidu.com%2F-fo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F4b90f603738da9779fffecb5b251f8198718e358.jpg&refer=http%3A%2F%2Fgss0.baidu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672169504&t=7627941a80e70c84f59b16f3389c8ba0'
+}
+</script>
